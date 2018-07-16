@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JKKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.4"
   s.summary      = "项目简单的配置"
 
   # This description is used to generate tags and improve search results.
