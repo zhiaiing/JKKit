@@ -242,7 +242,7 @@ static char badgeShowallNumbersKey;
     return objc_getAssociatedObject(self, &badgeShowallNumbersKey) ? YES : NO;
 }
 
-- (void) setjk_showAllNumbers:(BOOL)showAllNumbers{
+- (void) setJk_showAllNumbers:(BOOL)showAllNumbers{
     NSNumber *number = [NSNumber numberWithBool:showAllNumbers];
     objc_setAssociatedObject(self, &badgeShowallNumbersKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
