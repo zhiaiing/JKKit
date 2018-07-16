@@ -2,16 +2,16 @@
 //  JKKitHeader.h
 //  JKBaseProject
 //
-//  Created by Kang on 2018/7/13.
+//  Created by Kang on 2018/7/16.
 //  简书地址: https://www.jianshu.com/u/fae6c7ac5a9d
 //  Copyright © 2018年 lanxiao. All rights reserved.
 //
 
+#ifndef JKKitHeader_h
+#define JKKitHeader_h
+
 //宏
 #import "JKMacro.h"
-
-
-
 
 
 
@@ -75,3 +75,27 @@
 #import "UIDevice+JKAdd.h"
 
 #import "UIApplication+JKApplication.h"
+
+
+
+#endif /* JKKitHeader_h */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
