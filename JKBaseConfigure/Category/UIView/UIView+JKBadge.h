@@ -32,10 +32,10 @@ typedef NS_ENUM(NSUInteger, LFBadgeSizeType) {
 
 @interface UIView (JKBadge)
 
-@property (nonatomic, strong, setter=setjk_badge:, getter=jk_badge) UILabel *badge;
-@property (nonatomic, setter=setjk_badgeOriginX:, getter=jk_badgeOriginX) CGFloat badgeOriginX;
-@property (nonatomic, getter=jk_badgeOriginY, setter=setjk_badgeOriginY:) CGFloat badgeOriginY;
-@property (nonatomic, getter=jk_showAllNumbers, setter=setjk_showAllNumbers:) BOOL showAllNumbers;//展示完整的数字 (默认超过100展示99+)  等于0也展示
+@property (nonatomic, strong, setter=setJk_badge:, getter=jk_badge) UILabel *badge;
+@property (nonatomic, setter=setJk_badgeOriginX:, getter=jk_badgeOriginX) CGFloat badgeOriginX;
+@property (nonatomic, getter=jk_badgeOriginY, setter=setJk_badgeOriginY:) CGFloat badgeOriginY;
+@property (nonatomic, getter=jk_showAllNumbers, setter=setJk_showAllNumbers:) BOOL showAllNumbers;//展示完整的数字 (默认超过100展示99+)  等于0也展示
 
 
 

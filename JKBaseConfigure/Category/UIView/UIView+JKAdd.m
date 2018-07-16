@@ -222,7 +222,7 @@
     return self.frame.origin.x;
 }
 
-- (void)setjk_left:(CGFloat)x {
+- (void)setJk_left:(CGFloat)x {
     CGRect frame = self.frame;
     frame.origin.x = x;
     self.frame = frame;
@@ -232,7 +232,7 @@
     return self.frame.origin.y;
 }
 
-- (void)setjk_top:(CGFloat)y {
+- (void)setJk_top:(CGFloat)y {
     CGRect frame = self.frame;
     frame.origin.y = y;
     self.frame = frame;
@@ -242,7 +242,7 @@
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setjk_right:(CGFloat)right {
+- (void)setJk_right:(CGFloat)right {
     CGRect frame = self.frame;
     frame.origin.x = right - frame.size.width;
     self.frame = frame;
@@ -252,7 +252,7 @@
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setjk_bottom:(CGFloat)bottom {
+- (void)setJk_bottom:(CGFloat)bottom {
     CGRect frame = self.frame;
     frame.origin.y = bottom - frame.size.height;
     self.frame = frame;
@@ -262,7 +262,7 @@
     return self.frame.size.width;
 }
 
-- (void)setjk_width:(CGFloat)width {
+- (void)setJk_width:(CGFloat)width {
     CGRect frame = self.frame;
     frame.size.width = width;
     self.frame = frame;
@@ -272,7 +272,7 @@
     return self.frame.size.height;
 }
 
-- (void)setjk_height:(CGFloat)height {
+- (void)setJk_height:(CGFloat)height {
     CGRect frame = self.frame;
     frame.size.height = height;
     self.frame = frame;
@@ -282,7 +282,7 @@
     return self.center.x;
 }
 
-- (void)setjk_centerX:(CGFloat)centerX {
+- (void)setJk_centerX:(CGFloat)centerX {
     self.center = CGPointMake(centerX, self.center.y);
 }
 
@@ -290,7 +290,7 @@
     return self.center.y;
 }
 
-- (void)setjk_centerY:(CGFloat)centerY {
+- (void)setJk_centerY:(CGFloat)centerY {
     self.center = CGPointMake(self.center.x, centerY);
 }
 
@@ -298,7 +298,7 @@
     return self.frame.origin;
 }
 
-- (void)setjk_origin:(CGPoint)origin {
+- (void)setJk_origin:(CGPoint)origin {
     CGRect frame = self.frame;
     frame.origin = origin;
     self.frame = frame;
@@ -308,7 +308,7 @@
     return self.frame.size;
 }
 
-- (void)setjk_size:(CGSize)size {
+- (void)setJk_size:(CGSize)size {
     CGRect frame = self.frame;
     frame.size = size;
     self.frame = frame;

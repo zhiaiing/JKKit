@@ -50,16 +50,16 @@
  */
 @property (nonatomic, readonly, getter=jk_viewController) UIViewController *viewController;
 
-@property (nonatomic, setter=setjk_left:, getter=jk_left) CGFloat left;    ///< Shortcut for frame.origin.x.
-@property (nonatomic, setter=setjk_top:, getter=jk_top) CGFloat top;     ///< Shortcut for frame.origin.y
-@property (nonatomic, setter=setjk_right:, getter=jk_right) CGFloat right;   ///< Shortcut for frame.origin.x + frame.size.width
-@property (nonatomic, setter=setjk_bottom:, getter=jk_bottom) CGFloat bottom;  ///< Shortcut for frame.origin.y + frame.size.height
-@property (nonatomic, setter=setjk_width:, getter=jk_width) CGFloat width;   ///< Shortcut for frame.size.width.
-@property (nonatomic, setter=setjk_height:, getter=jk_height) CGFloat height;  ///< Shortcut for frame.size.height.
-@property (nonatomic, setter=setjk_centerX:, getter=jk_centerX) CGFloat centerX; ///< Shortcut for center.x
-@property (nonatomic, setter=setjk_centerY:, getter=jk_centerY) CGFloat centerY; ///< Shortcut for center.y
-@property (nonatomic, setter=setjk_origin:, getter=jk_origin) CGPoint origin;  ///< Shortcut for frame.origin.
-@property (nonatomic, getter=jk_size, setter=setjk_size: ) CGSize size;     ///< Shortcut for frame.size.
+@property (nonatomic, setter=setJk_left:, getter=jk_left) CGFloat left;    ///< Shortcut for frame.origin.x.
+@property (nonatomic, setter=setJk_top:, getter=jk_top) CGFloat top;     ///< Shortcut for frame.origin.y
+@property (nonatomic, setter=setJk_right:, getter=jk_right) CGFloat right;   ///< Shortcut for frame.origin.x + frame.size.width
+@property (nonatomic, setter=setJk_bottom:, getter=jk_bottom) CGFloat bottom;  ///< Shortcut for frame.origin.y + frame.size.height
+@property (nonatomic, setter=setJk_width:, getter=jk_width) CGFloat width;   ///< Shortcut for frame.size.width.
+@property (nonatomic, setter=setJk_height:, getter=jk_height) CGFloat height;  ///< Shortcut for frame.size.height.
+@property (nonatomic, setter=setJk_centerX:, getter=jk_centerX) CGFloat centerX; ///< Shortcut for center.x
+@property (nonatomic, setter=setJk_centerY:, getter=jk_centerY) CGFloat centerY; ///< Shortcut for center.y
+@property (nonatomic, setter=setJk_origin:, getter=jk_origin) CGPoint origin;  ///< Shortcut for frame.origin.
+@property (nonatomic, getter=jk_size, setter=setJk_size: ) CGSize size;     ///< Shortcut for frame.size.
 
 
 @property (nonatomic, readonly) CGRect jk_screenFrame; ///< View frame on the screen, taking into account scroll views.

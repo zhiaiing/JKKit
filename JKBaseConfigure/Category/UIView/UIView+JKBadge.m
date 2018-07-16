@@ -101,9 +101,8 @@ static char badgeShowallNumbersKey;
 - (void)badgeInit
 {
     if (nil == self.jk_badge) {
-        
-        [self setjk_badge:[[UILabel alloc] initWithFrame:CGRectZero]];
-//        self.jk_badge = [[UILabel alloc] initWithFrame:CGRectZero];
+    
+        self.jk_badge = [[UILabel alloc] initWithFrame:CGRectZero];
         self.jk_badge.textAlignment = NSTextAlignmentCenter;
         self.jk_badge.backgroundColor = JKUIColorWithRGB(228,32,38);
         self.jk_badge.textColor = [UIColor whiteColor];
@@ -123,11 +122,9 @@ static char badgeShowallNumbersKey;
         case LFBadgeTypeRedDot:
         {
             self.jk_badge.text = @"";
-            
-            [self.jk_badge setjk_width:LF_BADGE_VIEW_REDDOT_WIDTH];
-            [self.jk_badge setjk_height:LF_BADGE_VIEW_REDDOT_WIDTH];
-//            self.jk_badge.jk_width = LF_BADGE_VIEW_REDDOT_WIDTH;
-//            self.jk_badge.jk_height = LF_BADGE_VIEW_REDDOT_WIDTH;
+        
+            self.jk_badge.jk_width = LF_BADGE_VIEW_REDDOT_WIDTH;
+            self.jk_badge.jk_height = LF_BADGE_VIEW_REDDOT_WIDTH;
         }
             break;
         case LFBadgeTypeNumber:
@@ -139,30 +136,27 @@ static char badgeShowallNumbersKey;
             }
             
             if(value >= 100){
-//                self.jk_badge.jk_width = LF_BADGE_VIEW_BIG_WIDTH;
-                [self.jk_badge setjk_width:LF_BADGE_VIEW_BIG_WIDTH];
+                self.jk_badge.jk_width = LF_BADGE_VIEW_BIG_WIDTH;
+             
             }
             else if(value >= 10){
-//                self.jk_badge.jk_width = LF_BADGE_VIEW_STANDARD_WIDTH;
-                [self.jk_badge setjk_width:LF_BADGE_VIEW_STANDARD_WIDTH];
+                self.jk_badge.jk_width = LF_BADGE_VIEW_STANDARD_WIDTH;
+            
             }
             else{
-//                self.jk_badge.jk_width = LF_BADGE_VIEW_SAMLL_WIDTH;
-                [self.jk_badge setjk_width:LF_BADGE_VIEW_SAMLL_WIDTH];
+                self.jk_badge.jk_width = LF_BADGE_VIEW_SAMLL_WIDTH;
+               
             }
-//            self.jk_badge.jk_height = LF_BADGE_VIEW_HEIGHT;
-            [self.jk_badge setjk_height:LF_BADGE_VIEW_HEIGHT];
+            self.jk_badge.jk_height = LF_BADGE_VIEW_HEIGHT;
+   
             self.jk_badge.font = [UIFont systemFontOfSize:LF_BADGE_VIEW_NUMBER_FONT];
         }
             break;
         case LFBadgeTypeNew:
         {
             self.jk_badge.text = @"new";
-//            self.jk_badge.jk_width = LF_BADGE_VIEW_BIG_WIDTH;
-//            self.jk_badge.jk_height = LF_BADGE_VIEW_HEIGHT;
-            
-            [self.jk_badge setjk_width:LF_BADGE_VIEW_BIG_WIDTH];
-            [self.jk_badge setjk_height:LF_BADGE_VIEW_HEIGHT];
+            self.jk_badge.jk_width = LF_BADGE_VIEW_BIG_WIDTH;
+            self.jk_badge.jk_height = LF_BADGE_VIEW_HEIGHT;
             
             self.jk_badge.font = [UIFont systemFontOfSize:LF_BADGE_VIEW_NEW_FONT];
         }
@@ -180,13 +174,13 @@ static char badgeShowallNumbersKey;
     
     //*********自己定义的X Y*************//
     if([self hasBadgeOriginX]){
-//        self.jk_badge.jk_left = self.jk_badgeOriginX;
-        [self.jk_badge setjk_left:self.jk_badgeOriginX];
+        self.jk_badge.jk_left = self.jk_badgeOriginX;
+
     }
     
     if([self hasBadgeOriginY]){
-//        self.jk_badge.jk_top = self.jk_badgeOriginY;
-        [self.jk_badge setjk_top:self.jk_badgeOriginY];
+        self.jk_badge.jk_top = self.jk_badgeOriginY;
+     
     }
     //********************************//
     
@@ -200,7 +194,7 @@ static char badgeShowallNumbersKey;
     UILabel* lbl = objc_getAssociatedObject(self, &badgeLabelKey);
     if(lbl == nil) {
         lbl = [[UILabel alloc] initWithFrame:CGRectZero];
-        [self setjk_badge:lbl];
+        [self setJk_badge:lbl];
         lbl.textAlignment = NSTextAlignmentCenter;
         lbl.backgroundColor = JKUIColorWithRGB(228,32,38);
         lbl.textColor = [UIColor whiteColor];
@@ -212,7 +206,7 @@ static char badgeShowallNumbersKey;
     return lbl;
 }
 
-- (void)setjk_badge:(UILabel *)label
+- (void)setJk_badge:(UILabel *)label
 {
     objc_setAssociatedObject(self, &badgeLabelKey, label, OBJC_ASSOCIATION_RETAIN);
 }
@@ -226,13 +220,13 @@ static char badgeShowallNumbersKey;
     return number.floatValue;
 }
 
--(void) setjk_badgeOriginX:(CGFloat)badgeOriginX
+-(void) setJk_badgeOriginX:(CGFloat)badgeOriginX
 {
     NSNumber *number = [NSNumber numberWithDouble:badgeOriginX];
     objc_setAssociatedObject(self, &badgeOriginXKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
-//    self.jk_badge.jk_left = badgeOriginX;
-    [self.jk_badge setjk_left:badgeOriginX];
+    self.jk_badge.jk_left = badgeOriginX;
+
 }
 
 - (BOOL)hasBadgeOriginY{
@@ -253,13 +247,13 @@ static char badgeShowallNumbersKey;
     objc_setAssociatedObject(self, &badgeShowallNumbersKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
--(void) setjk_badgeOriginY:(CGFloat)badgeOriginY
+-(void) setJk_badgeOriginY:(CGFloat)badgeOriginY
 {
     NSNumber *number = [NSNumber numberWithDouble:badgeOriginY];
     objc_setAssociatedObject(self, &badgeOriginYKey, number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
-//    self.jk_badge.jk_top = badgeOriginY;
-    [self.jk_badge setjk_top:badgeOriginY];
+    self.jk_badge.jk_top = badgeOriginY;
+
 }
 
 - (LFBadgeType)jk_getBadgeType{
