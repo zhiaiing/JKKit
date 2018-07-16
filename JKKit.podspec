@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "JKKit"
+  s.name         = "JKKits"
   s.version      = "0.0.5"
   s.summary      = "项目简单的配置"
 
