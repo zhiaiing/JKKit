@@ -8,7 +8,7 @@
 //
 
 //宏
-#import "WHMacro.h"
+#import "JKMacro.h"
 
 
 
