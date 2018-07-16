@@ -78,6 +78,7 @@
 //安全区域下部的高度
 #define  SafeAreaAllHeight (Device_Is_iPhoneX ? (34.f + 24.f) : 0.f)
 
+
 //Aplication
 #define kApplication [UIApplication sharedApplication]
 //keyWindow
