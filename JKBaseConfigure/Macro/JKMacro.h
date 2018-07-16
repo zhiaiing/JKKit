@@ -52,19 +52,33 @@
 || ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
 || ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
 
-//屏幕宽度
-#define kScreenWidth \
-([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? [UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale : [UIScreen mainScreen].bounds.size.width)
-//屏幕高度
-#define kScreenHeight \
-([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? [UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale : [UIScreen mainScreen].bounds.size.height)
-//屏幕Size
-#define kScreenSize \
-([[UIScreen mainScreen] respondsToSelector:@selector(nativeBounds)] ? CGSizeMake([UIScreen mainScreen].nativeBounds.size.width/[UIScreen mainScreen].nativeScale,[UIScreen mainScreen].nativeBounds.size.height/[UIScreen mainScreen].nativeScale) : [UIScreen mainScreen].bounds.size)
+
 //状态栏加导航栏高度
 #define kTopHeight (kIs_iPhoneX ? 88 : 64)
 //TabBar高度
 #define kTabBarHeight (kIs_iPhoneX ? 83 : 49)
+
+// Status bar height
+#define  StatusBarHeight      (Device_Is_iPhoneX ? 44.f : 20.f)
+
+// Navigation bar height.
+#define  NavigationBarHeight  44.f
+
+// Tabbar height.
+#define  TabbarHeight         (49.f + SafeAreaBottomHeight)
+
+
+// Status bar & navigation bar height.
+#define  StatusBarAndNavigationBarHeight  (Device_Is_iPhoneX ? 88.f : 64.f)
+//#define  StatusBarAndNavigationBarHeight  64.f
+
+#define  SafeAreaTopHeight (Device_Is_iPhoneX ? 24.f : 0.f)
+//安全区域上部的高度
+#define  SafeAreaBottomHeight (Device_Is_iPhoneX ? 34.f : 0.f)
+//安全区域下部的高度
+#define  SafeAreaAllHeight (Device_Is_iPhoneX ? (34.f + 24.f) : 0.f)
+
+#define
 
 //Aplication
 #define kApplication [UIApplication sharedApplication]
@@ -123,8 +137,10 @@ blue:((float)(hexValue & 0xFF)) / 255.0 alpha:alphaValue]
 #define kStrongSelf(type) __strong typeof(type) type = weak##type;
 
 // 必须成对使用，使用该宏前必须加@，如@weakify(self);  @strongify(self);
-#define weakify( x ) autoreleasepool{} __weak typeof(x) weak##x = x
-#define strongify( x ) autoreleasepool{} __strong typeof(weak##x) x = weak##x
+//#define weakify( x ) autoreleasepool{} __weak typeof(x) weak##x = x
+
+//#define strongify( x ) autoreleasepool{} __strong typeof(weak##x) x = weak##x
+
 #define onExit(deferBlock) \
 autoreleasepool{} __strong nob_defer_block_t nob_macro_concat(__nob_stack_defer_block_, __LINE__) __attribute__((cleanup(nob_deferFunc), unused)) = deferBlock
 
